@@ -17,8 +17,8 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 @st.cache_resource
 def load_models():
     # Mengarah ke folder artifacts sesuai struktur yang kita bahas sebelumnya
-    clf_path = os.path.join(BASE_DIR, "artifacts", "classification_model.pkl")
-    reg_path = os.path.join(BASE_DIR, "artifacts", "regression_model.pkl")
+    clf_path = os.path.join(BASE_DIR, "classification_model.pkl")
+    reg_path = os.path.join(BASE_DIR, "regression_model.pkl")
     
     with open(clf_path, "rb") as f:
         clf_model = pickle.load(f)
